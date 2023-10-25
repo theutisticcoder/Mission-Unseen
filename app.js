@@ -963,7 +963,7 @@ function load() {
 	for (var i = 0; i < 3000; i += 50) {
 		dirtnew = dirt.cloneNode(true);
 		dirtnew.style.transform =
-			"translateY(" + i + "px) translateX(" + (-i) + "px)";
+			"translateY(" + -i + "px) translateX(" + (i) + "px)";
 		dirtnew.style.height = "50px";
 		dirtnew.style.width = "50px";
 		dirtnew.style.transformStyle = "preserve-3d";
@@ -981,7 +981,7 @@ function load() {
 		newrow.style.perspective = "800px";
 		newrow.style.position = "absolute";
 		newrow.style.transform =
-			"rotateX(180deg) translateY(1600px) perspective(6000px) translateZ(" +
+			" translateY(400px) perspective(6000px) translateZ(" +
 			(z * 50) +
 			"px)";
 
