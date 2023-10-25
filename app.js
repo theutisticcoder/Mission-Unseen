@@ -139,7 +139,7 @@ function load() {
 		matrix4 = new WebKitCSSMatrix(
 			window.getComputedStyle(document.getElementById("universe")).transform
 		);
-		if (matrix4.m41 === -1000 && matrix4.m43 === 0 && ps === 10) {
+		if (matrix4.m41 === -1000 && -matrix4.m43 === 0 && ps === 10) {
 			alert("Enjoy your new gun.");
 			range = 500;
 			document.getElementById("range").innerHTML = "Range: 500";
@@ -315,7 +315,7 @@ function load() {
 			window.getComputedStyle(document.getElementById("universe")).transform
 		);
 		document.getElementById("coordinates").innerHTML =
-			"You are at X: " + (-matrix4.m41 - 1000) + " Z: " + matrix4.m43;
+			"You are at X: " + (-matrix4.m41 - 1000) + " Z: " + -matrix4.m43;
 	}
 		document.getElementById("stats"). onclick = ()=> {
 			matrix = new WebKitCSSMatrix(
@@ -332,7 +332,7 @@ function load() {
 				setTimeout(() => {
 					if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 500
+						targetmatrix.m43 === -matrix4.m43 + 500
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -341,7 +341,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 450
+						targetmatrix.m43 === -matrix4.m43 + 450
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -350,7 +350,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 400
+						targetmatrix.m43 === -matrix4.m43 + 400
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -359,7 +359,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 350
+						targetmatrix.m43 === -matrix4.m43 + 350
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -368,7 +368,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 300
+						targetmatrix.m43 === -matrix4.m43 + 300
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -377,7 +377,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 250
+						targetmatrix.m43 === -matrix4.m43 + 250
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -386,7 +386,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 200
+						targetmatrix.m43 === -matrix4.m43 + 200
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -395,7 +395,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 150
+						targetmatrix.m43 === -matrix4.m43 + 150
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -404,7 +404,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 100
+						targetmatrix.m43 === -matrix4.m43 + 100
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -413,7 +413,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 50
+						targetmatrix.m43 === -matrix4.m43 + 50
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -422,7 +422,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43
+						targetmatrix.m43 === -matrix4.m43
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -663,7 +663,7 @@ function load() {
 				setTimeout(() => {
 					if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 500
+						targetmatrix.m43 === -matrix4.m43 + 500
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -672,7 +672,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 450
+						targetmatrix.m43 === -matrix4.m43 + 450
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -681,7 +681,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 400
+						targetmatrix.m43 === -matrix4.m43 + 400
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -690,7 +690,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 350
+						targetmatrix.m43 === -matrix4.m43 + 350
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -699,7 +699,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 300
+						targetmatrix.m43 === -matrix4.m43 + 300
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -708,7 +708,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 250
+						targetmatrix.m43 === -matrix4.m43 + 250
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -717,7 +717,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 200
+						targetmatrix.m43 === -matrix4.m43 + 200
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -726,7 +726,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 150
+						targetmatrix.m43 === -matrix4.m43 + 150
 					) {
 						socket.emit("playerhit", person);
 						document.getElementById("enemyhealth").value--;
@@ -735,7 +735,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 100
+						targetmatrix.m43 === -matrix4.m43 + 100
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -744,7 +744,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43 + 50
+						targetmatrix.m43 === -matrix4.m43 + 50
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -753,7 +753,7 @@ function load() {
 						}
 					} else if (
 						targetmatrix.m41 === matrix4.m41 &&
-						targetmatrix.m43 === matrix4.m43
+						targetmatrix.m43 === -matrix4.m43
 					) {
 						document.getElementById("enemyhealth").value--;
 						socket.emit("playerhit", person);
@@ -937,7 +937,7 @@ function load() {
 		you = document.getElementById("universe");
 		matrix4 = new WebKitCSSMatrix(window.getComputedStyle(you).transform);
 		document.getElementById("coordinates").innerHTML =
-			"You are at X: " + (-matrix4.m41 - 1000) + " Z: " + matrix4.m43;
+			"You are at X: " + (-matrix4.m41 - 1000) + " Z: " + -matrix4.m43;
 		if (ps < 25) {
 			document.getElementById("enemy").innerHTML =
 				"A soldier is at X: " + matrix3.m41 + " Z: " + -matrix3.m43;
@@ -1024,8 +1024,8 @@ function load() {
 			otherplayer.style.transform =
 				"translateZ(" + enematrix.m43 + "px) translateX(" + enematrix.m41 + "px)";
 			if (
-				targetmatrix.m43 - matrix4.m43 <= 500 &&
-				targetmatrix.m43 - matrix4.m43 >= 0 &&
+				targetmatrix.m43 - -matrix4.m43 <= 500 &&
+				targetmatrix.m43 - -matrix4.m43 >= 0 &&
 				targetmatrix.m41 === matrix4.m41
 			) {
 				otherplayer.style.zIndex = "9";
