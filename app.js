@@ -981,7 +981,7 @@ function load() {
 		newrow.style.perspective = "800px";
 		newrow.style.position = "absolute";
 		newrow.style.transform =
-			"translateY(1600px) perspective(6000px) translateZ(" +
+			"perspective(6000px) translateZ(" +
 			(z * 50) +
 			"px)";
 
