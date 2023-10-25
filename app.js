@@ -981,7 +981,7 @@ function load() {
 		newrow.style.perspective = "800px";
 		newrow.style.position = "absolute";
 		newrow.style.transform =
-			"translateY(1600px) perspective(6000px) translateZ(" +
+			"translateY(-1600px) perspective(6000px) translateZ(" +
 			(z * 50) +
 			"px)";
 
@@ -1054,7 +1054,6 @@ function load() {
 		if (t === 10) {
 			
 			document.getElementsByClassName("tree")[i].hidden = false;
-			document.getElementsByClassName("tree")[i].style.rotate = "0 0 1 180deg"
 		}
 	}
 }
