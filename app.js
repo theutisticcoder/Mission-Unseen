@@ -300,11 +300,11 @@ function load() {
         }                       
     } else {
         if ( ydiff > 0 ) {
- a -= 50;
+ a += 50;
 					document.getElementById("universe").style.transform =
 				"translate3d(" + b + "px, " + y + "px, " + a + "px) perspective(" +(a + 5000) +"px)";
         } else { 
-            a += 50;
+            a -= 50;
 					document.getElementById("universe").style.transform =
 				"translate3d(" + b + "px, " + y + "px, " + a + "px) perspective(" +(a + 5000) +"px)";
         }                                                                 
@@ -621,14 +621,14 @@ function load() {
 		var worldclone;
 		if (e.key == "ArrowUp") {
 			e.preventDefault();
-			a += 50;
+			a -= 50;
 			playera += 50;
 			document.getElementById("universe").style.transform =
 				"translate3d(" + b + "px, " + y + "px, " + a + "px) perspective(" +(a + 5000) +"px)";
 		}
 		if (e.key == "ArrowDown") {
 			e.preventDefault();
-			a -= 50;
+			a += 50;
 			playera -= 50;
 			document.getElementById("universe").style.transform =
 				"translate3d(" + b + "px, " + y + "px, " + a + "px) perspective(" +(a + 5000) +"px)";
