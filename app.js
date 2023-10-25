@@ -153,9 +153,9 @@ function load() {
 		ps++;
 		document.getElementById("panther").style.transform =
 			"translateX(" +
-			100 * Math.floor(Math.random() * 50) +
+			100 * Math.floor(Math.random() * 20) +
 			"px) translateZ(" +
-			-100 * Math.floor(Math.random() * 50) +
+			-100 * Math.floor(Math.random() * 20) +
 			"px) perspective(6000px) translateY(300px)";
 		matrix3 = new WebKitCSSMatrix(getComputedStyle(sol1).transform);
 		localStorage.setItem("x", matrix3.m41);
@@ -960,7 +960,7 @@ function load() {
 	var dirt = document.getElementById("boxDiv");
 	var rows = document.getElementById("mainDiv");
 	var dirtnew;
-	for (var i = 0; i < 7000; i += 50) {
+	for (var i = 0; i < 3000; i += 50) {
 		dirtnew = dirt.cloneNode(true);
 		dirtnew.style.transform =
 			"translateY(" + -i + "px) translateX(" + (i - 2500) + "px)";
@@ -971,7 +971,7 @@ function load() {
 	}
 	var newrow;
 	var z = 0;
-	while (z < 140) {
+	while (z < 60) {
 		z++;
 		newrow = rows.cloneNode(true);
 		newrow.style.top = "100px";
