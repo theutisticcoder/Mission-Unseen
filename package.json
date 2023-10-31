@@ -17,6 +17,7 @@
     "socket.io": "^4.6.1",
     "websockets": "^0.2.0",
     "ws": "^8.13.0"
+    "next": "workspace:*",
   },
   "scripts": {
     "tauri": "tauri"
